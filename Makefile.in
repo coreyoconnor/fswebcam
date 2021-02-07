@@ -11,7 +11,7 @@ datarootdir = @datarootdir@
 
 CC      = @CC@
 CFLAGS  = @CPPFLAGS@ @CFLAGS@ @DEFS@
-LDFLAGS = @LDFLAGS@
+LDFLAGS = @LDFLAGS@ -lm
 
 OBJS  = fswebcam.o log.o effects.o parse.o src.o @SRC_OBJS@
 OBJS += dec_rgb.o dec_yuv.o dec_grey.o dec_bayer.o dec_jpeg.o dec_png.o
@@ -39,4 +39,3 @@ clean:
 
 distclean: clean
 	rm -rf config.h *.cache config.log config.status Makefile *.jp*g *.png *~
-
